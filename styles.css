@@ -239,10 +239,15 @@ a:focus-visible, button:focus-visible {
 .editorial-empty h3 { margin-bottom: 8px; }
 .editorial-empty p { margin-bottom: 0; }
 .team { background: var(--paper); }
-.team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start; }
+.team-heading { max-width: 720px; margin-bottom: 42px; }
 .team h2 { margin: 24px 0 0; font: 600 clamp(38px, 5vw, 60px) / 1.08 var(--display); letter-spacing: -.065em; }
-.team-note { max-width: 510px; padding-top: 26px; }
-.team-note p { margin-top: 0; font-size: 15px; }
+.team-heading > p { max-width: 620px; margin: 18px 0 0; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.team-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.team-card { min-width: 0; overflow: hidden; border: 1px solid #e1e6e8; background: #fff; }
+.team-photo { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center 34%; background: #e9eef2; }
+.team-card-copy { min-height: 90px; padding: 17px 18px 18px; }
+.team-card h3 { margin: 0; font: 700 17px / 1.35 var(--display); letter-spacing: -.025em; }
+.team-card-copy p { margin: 6px 0 0; color: var(--blue); font-size: 11px; font-weight: 700; line-height: 1.5; }
 
 /* Community and join links */
 .community { background: var(--navy); color: #fff; }
@@ -322,7 +327,8 @@ a:focus-visible, button:focus-visible {
   .hero h1 { font-size: clamp(54px, 11vw, 78px); }
   .hero-mark { right: 20px; bottom: 18px; width: 56px; height: 56px; }
   .section-pad { padding: 78px 0; }
-  .intro-grid, .community-grid, .team-grid { grid-template-columns: 1fr; gap: 28px; }
+  .intro-grid, .community-grid { grid-template-columns: 1fr; gap: 28px; }
+  .team-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .intro-copy { padding-top: 0; }
   .values-row { margin-top: 48px; gap: 25px; }
   .section-heading { display: block; margin-bottom: 35px; }
@@ -333,7 +339,6 @@ a:focus-visible, button:focus-visible {
   .focus-icon { margin: 24px 0 14px; }
   .content-card { min-height: 235px; padding: 28px; }
   .editorial-empty { padding: 30px; }
-  .team-note { padding-top: 0; }
   .community-grid { gap: 42px; }
   .community-item { padding: 20px 0; }
   .footer-top { min-height: 100px; padding: 20px 0; flex-wrap: wrap; gap: 10px; }
@@ -352,6 +357,9 @@ a:focus-visible, button:focus-visible {
   .community-item { grid-template-columns: 32px minmax(0, 1fr); }
   .item-action { grid-column: 2; text-align: left; }
   .content-cards { grid-template-columns: 1fr; }
+  .team-card-copy { padding: 15px 13px 16px; }
+  .team-card h3 { font-size: 15px; }
+  .team-card-copy p { font-size: 10px; }
   .editorial-empty { align-items: flex-start; flex-direction: column; }
   .footer-top { align-items: flex-start; }
   .back-top { padding-top: 12px; }

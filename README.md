@@ -8,7 +8,8 @@ The public website for the Zetech University Research and Innovation Club (ZURI)
 
 - Responsive, single-page static website built with HTML, CSS, and JavaScript.
 - Research and projects, events and opportunities, insights and articles, and leadership sections are in place.
-- Club-specific projects, event dates, articles, and leadership profiles are awaiting confirmation and approval.
+- The club overview and seven leadership names, roles, and portraits have been added from club-supplied information.
+- Project details, event dates, and articles are awaiting confirmation and approval.
 - The WhatsApp invite is `https://chat.whatsapp.com/K7sTw4zHiXr5oTB896LgVl`.
 - No backend, database, member accounts, online submission storage, or publishing dashboard is included.
 - No development server or deployed website is started by this project automatically.
@@ -35,7 +36,7 @@ The homepage is currently one page with section links in the header:
 4. **Research and projects** - Introduction to the project showcase and a link for students to share an idea.
 5. **Events and opportunities** - Space for confirmed activities, calls, and registration details.
 6. **Insights and articles** - Space for reviewed research notes and club stories.
-7. **Leadership** - Space for approved committee names, roles, and profiles.
+7. **Leadership** - Profiles for the patron, chairperson, interim chairperson, vice chairperson, programme coordinator, communication director, and membership chair.
 8. **Community** - Ways to join, contribute an idea, and connect.
 9. **Join** - WhatsApp community invite.
 
@@ -50,8 +51,25 @@ script.js               Mobile menu behavior and automatic footer year
 public/images/hero.jpg  Zetech campus image used in the home hero
 public/images/zetech-logo.jpg  Zetech University mark
 public/images/zuri-logo.jpg    ZURI Club logo
+public/images/patron.png
+public/images/chairperson.png
+public/images/interim-chairperson.png
+public/images/vice-chairperson.png
+public/images/programme-coordinator.png
+public/images/communication-director.png
+public/images/membership-chair.png  Leadership profile photos
 README.md               Project guide and content update notes
 ```
+
+## Leadership profiles
+
+- Md. Esther Mwangi - Patron
+- Moses Tabalya - Chairperson
+- Elly Okello - Interim Chairperson
+- Paul Wako - Vice Chairperson
+- Ivy Nganga - Programme Coordinator
+- Gabriel Nyaringo - Communication Director
+- Emmanuel Bett - Membership Chair
 
 ## Interactions
 
@@ -64,7 +82,7 @@ README.md               Project guide and content update notes
 ## Updating content
 
 1. Confirm project facts with project teams, event dates and registration links with event owners, and article text with its author.
-2. Get approval for leadership names, roles, biographies, and photographs before publishing them.
+2. Confirm leadership names and roles with the club before changing the profiles. Photos are stored in `public/images/` with role-based filenames.
 3. Edit the corresponding section in `index.html`. Keep unpublished details marked as awaiting confirmation until approved.
 4. Keep links and section IDs in sync. Check that each in-page link points to an existing section.
 5. If the WhatsApp invite changes, replace every occurrence in `index.html`.
