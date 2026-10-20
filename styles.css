@@ -242,6 +242,12 @@ a:focus-visible, button:focus-visible {
 .content-card .text-link { margin-top: 8px; }
 .section-more { margin: 26px 0 0; text-align: center; }
 .page-hero { padding: 85px 0 80px; background: #eef1ef; }
+.projects-hero { padding: 48px 0 44px; }
+.projects-hero h1 { margin-top: 14px; font-size: clamp(48px, 6vw, 68px); }
+.portfolio-section { padding: 56px 0 90px; }
+.portfolio-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 440px); align-items: end; gap: 42px; margin-bottom: 30px; }
+.portfolio-heading h2 { margin: 0; }
+.portfolio-heading > p { max-width: none; margin: 0 0 4px; color: var(--muted); font-size: 14px; line-height: 1.75; }
 .page-hero h1 { max-width: 850px; margin: 22px 0 16px; font: 600 clamp(44px, 7vw, 78px) / 1.04 var(--display); letter-spacing: -.065em; }
 .page-hero p { max-width: 720px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
 .page-hero .back-link { display: inline-block; margin-bottom: 28px; color: var(--blue); font-size: 12px; font-weight: 700; }
@@ -376,6 +382,8 @@ a:focus-visible, button:focus-visible {
   .intro-copy { padding-top: 0; }
   .values-row { margin-top: 48px; gap: 25px; }
   .section-heading { display: block; margin-bottom: 35px; }
+  .portfolio-heading { display: block; margin-bottom: 28px; }
+  .portfolio-heading > p { margin-top: 14px; }
   .section-heading > p { max-width: 520px; margin-top: 20px; }
   .focus-grid { grid-template-columns: 1fr; }
   .focus-card, .focus-card + .focus-card { min-height: 230px; padding: 22px 0; border-left: 0; border-bottom: 1px solid #ffffff32; }
