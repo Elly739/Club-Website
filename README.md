@@ -7,9 +7,9 @@ The public website for the Zetech University Research and Innovation Club (ZURI)
 ## Current status
 
 - Responsive, multi-page static website built with HTML, CSS, and JavaScript.
-- The home page introduces the club. Separate pages cover club information and leadership, the project directory and 13 project profiles, and the 2026 event archive.
+- The home page introduces the club. Separate pages cover club information and leadership, the project directory and 14 project profiles, and the 2025–2026 event archive.
 - The club mission, vision, membership overview, and available member support are published from club-supplied information.
-- The project showcase contains summaries of 13 club projects based on the information supplied by the club.
+- The project showcase contains profiles of 14 club projects based on information supplied by the club, including SmartWaste by Elly Okello.
 - Article content has not yet been supplied for publication.
 - The events page now includes month-by-month archives for 2025 and 2026. The 2026 summit entry is flagged because its notes give both 12 January and 27–28 January.
 - BIT concept illustrations, event photos, and ZURI community photos are used in their related project, event, and home-page sections.
@@ -48,7 +48,7 @@ index.html              Page content, navigation, links, and metadata
 about.html              Club mission, vision, membership, resources, and leadership
 projects.html           Project portfolio directory
 projects/               Individual static project profiles
-events.html             2026 event archive
+events.html             2025 and 2026 event archives and photos
 styles.css              Colors, typography, layout, responsive rules, and focus styles
 script.js               Mobile menu behavior and automatic footer year
 public/images/hero.jpg  Zetech campus image used in the home hero
