@@ -8,8 +8,9 @@ The public website for the Zetech University Research and Innovation Club (ZURI)
 
 - Responsive, single-page static website built with HTML, CSS, and JavaScript.
 - Research and projects, events and opportunities, insights and articles, and leadership sections are in place.
-- The club overview and seven leadership names, roles, and portraits have been added from club-supplied information.
-- Project details, event dates, and articles are awaiting confirmation and approval.
+- The club mission, vision, membership overview, and available member support are published from club-supplied information.
+- The project showcase contains summaries of 13 club projects based on the information supplied by the club.
+- Event dates and article content have not yet been supplied for publication.
 - The WhatsApp invite is `https://chat.whatsapp.com/K7sTw4zHiXr5oTB896LgVl`.
 - No backend, database, member accounts, online submission storage, or publishing dashboard is included.
 - No development server or deployed website is started by this project automatically.
@@ -31,9 +32,9 @@ The fonts are loaded from Google Fonts when the browser is online. The page uses
 The homepage is currently one page with section links in the header:
 
 1. **Home** - Zetech campus image, club introduction, and calls to action.
-2. **About** - The club's purpose and shared values.
+2. **About** - The club introduction, shared values, mission, vision, membership overview, and member resources.
 3. **What we do** - Research, innovation, and collaboration.
-4. **Research and projects** - Introduction to the project showcase and a link for students to share an idea.
+4. **Research and projects** - Summaries of 13 projects covering biometrics, ocean conservation, campus services, payments, transport, mobile services, urban resilience, student planning, digital communities, innovation services, online safety, geospatial intelligence, and intellectual property.
 5. **Events and opportunities** - Space for confirmed activities, calls, and registration details.
 6. **Insights and articles** - Space for reviewed research notes and club stories.
 7. **Leadership** - Profiles for the patron, chairperson, interim chairperson, vice chairperson, programme coordinator, communication director, and membership chair.
