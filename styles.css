@@ -60,6 +60,7 @@ a:focus-visible, button:focus-visible {
 .nav-links > a:not(.nav-join) { transition: color .2s ease; }
 .nav-links > a:not(.nav-join):hover { color: var(--blue); }
 .nav-join { padding: 13px 19px; border-radius: 3px; background: var(--navy); color: #fff; }
+.nav-links a[aria-current="page"]:not(.nav-join) { color: var(--blue); }
 .menu-toggle { display: none; }
 
 /* Hero */
@@ -223,6 +224,7 @@ a:focus-visible, button:focus-visible {
 .content-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .project-card { min-height: 255px; padding: 26px; }
+.home-project-grid .project-card:nth-child(n + 4) { display: none; }
 .project-card h3 { margin-top: 15px; }
 .project-impact { display: block; margin-top: 17px; padding-top: 12px; border-top: 1px solid var(--line); color: #4a637a; font-size: 11px; font-weight: 600; line-height: 1.6; }
 .content-card {
@@ -238,6 +240,32 @@ a:focus-visible, button:focus-visible {
 .content-card p, .editorial-empty p, .team-note p { color: var(--muted); font-size: 13px; line-height: 1.85; }
 .content-status { display: block; margin-top: 22px; padding-top: 13px; border-top: 1px solid var(--line); color: #4a637a; font-size: 11px; font-weight: 600; }
 .content-card .text-link { margin-top: 8px; }
+.section-more { margin: 26px 0 0; text-align: center; }
+.page-hero { padding: 85px 0 80px; background: #eef1ef; }
+.page-hero h1 { max-width: 850px; margin: 22px 0 16px; font: 600 clamp(44px, 7vw, 78px) / 1.04 var(--display); letter-spacing: -.065em; }
+.page-hero p { max-width: 720px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
+.page-hero .back-link { display: inline-block; margin-bottom: 28px; color: var(--blue); font-size: 12px; font-weight: 700; }
+.event-list { display: grid; gap: 14px; }
+.event-entry { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 25px; padding: 28px; background: #fff; border: 1px solid var(--line); }
+.event-date { display: flex; min-height: 82px; align-items: center; flex-direction: column; justify-content: center; background: var(--navy); color: #fff; }
+.event-date span { color: var(--lime); font-size: 10px; font-weight: 700; letter-spacing: .15em; }
+.event-date strong { font: 700 23px / 1.25 var(--display); }
+.event-entry h3 { margin: 8px 0; font: 700 22px / 1.3 var(--display); }
+.event-entry p { margin: 4px 0; color: var(--muted); font-size: 13px; }
+.event-note { color: #805c00 !important; font-size: 12px !important; }
+.event-contact { margin-top: 28px; color: var(--muted); font-size: 13px; }
+.event-contact a { color: var(--blue); font-weight: 700; }
+.project-detail { background: #fff; }
+.project-detail-layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(250px, .8fr); align-items: start; gap: 48px; }
+.project-detail-block { padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
+.project-detail-block p { margin: 13px 0 0; color: var(--muted); font-size: 15px; line-height: 1.9; }
+.project-team { padding: 28px; background: var(--paper); border: 1px solid var(--line); }
+.project-team ul { display: grid; gap: 10px; padding-left: 18px; margin: 20px 0; color: var(--ink); font-size: 13px; line-height: 1.6; }
+.project-team .event-note { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted) !important; }
+.about-impact { max-width: 700px; margin: 70px auto 0; text-align: center; }
+.about-impact h2 { margin: 0 0 14px; font: 700 34px / 1.15 var(--display); letter-spacing: -.045em; }
+.about-impact p { margin: 0 0 24px; color: var(--muted); line-height: 1.85; }
+.club-overview-page { margin-top: 0; }
 .editorial-empty {
   display: flex;
   min-height: 220px;
@@ -343,6 +371,7 @@ a:focus-visible, button:focus-visible {
   .intro-grid, .community-grid { grid-template-columns: 1fr; gap: 28px; }
   .club-overview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-detail-layout { grid-template-columns: 1fr; gap: 20px; }
   .team-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .intro-copy { padding-top: 0; }
   .values-row { margin-top: 48px; gap: 25px; }
@@ -373,6 +402,10 @@ a:focus-visible, button:focus-visible {
   .item-action { grid-column: 2; text-align: left; }
   .content-cards { grid-template-columns: 1fr; }
   .project-grid, .club-overview { grid-template-columns: 1fr; }
+  .event-entry { grid-template-columns: 66px minmax(0, 1fr); gap: 16px; padding: 18px; }
+  .event-date { min-height: 68px; }
+  .event-date strong { font-size: 19px; }
+  .page-hero { padding: 66px 0 58px; }
   .overview-card { min-height: 0; }
   .project-card { min-height: 0; }
   .team-card-copy { padding: 15px 13px 16px; }

@@ -6,11 +6,12 @@ The public website for the Zetech University Research and Innovation Club (ZURI)
 
 ## Current status
 
-- Responsive, single-page static website built with HTML, CSS, and JavaScript.
-- Research and projects, events and opportunities, insights and articles, and leadership sections are in place.
+- Responsive, multi-page static website built with HTML, CSS, and JavaScript.
+- The home page introduces the club. Separate pages cover club information and leadership, the project directory and 13 project profiles, and the 2026 event archive.
 - The club mission, vision, membership overview, and available member support are published from club-supplied information.
 - The project showcase contains summaries of 13 club projects based on the information supplied by the club.
-- Event dates and article content have not yet been supplied for publication.
+- Article content has not yet been supplied for publication.
+- The 2026 event archive is based on the club's supplied schedule. The summit entry is flagged because its notes give both 12 January and 27–28 January.
 - The WhatsApp invite is `https://chat.whatsapp.com/K7sTw4zHiXr5oTB896LgVl`.
 - No backend, database, member accounts, online submission storage, or publishing dashboard is included.
 - No development server or deployed website is started by this project automatically.
@@ -29,24 +30,24 @@ The fonts are loaded from Google Fonts when the browser is online. The page uses
 
 ## Website structure
 
-The homepage is currently one page with section links in the header:
+The site is static and has no build step. Shared navigation connects these pages:
 
-1. **Home** - Zetech campus image, club introduction, and calls to action.
-2. **About** - The club introduction, shared values, mission, vision, membership overview, and member resources.
-3. **What we do** - Research, innovation, and collaboration.
-4. **Research and projects** - Summaries of 13 projects covering biometrics, ocean conservation, campus services, payments, transport, mobile services, urban resilience, student planning, digital communities, innovation services, online safety, geospatial intelligence, and intellectual property.
-5. **Events and opportunities** - Space for confirmed activities, calls, and registration details.
-6. **Insights and articles** - Space for reviewed research notes and club stories.
-7. **Leadership** - Profiles for the patron, chairperson, interim chairperson, vice chairperson, programme coordinator, communication director, and membership chair.
-8. **Community** - Ways to join, contribute an idea, and connect.
-9. **Join** - WhatsApp community invite.
+1. **Home** (`index.html`) - Club introduction, focus areas, featured projects, and community links.
+2. **About** (`about.html`) - Mission, vision, membership, resources, and leadership profiles.
+3. **Projects** (`projects.html`) - Portfolio directory linking to one page per project in `projects/`.
+4. **Events** (`events.html`) - Archive of the 2026 activities supplied by the club.
+5. **Insights** - The article introduction on the home page, ready for reviewed articles.
 
-When the club has enough approved material, the content sections can become dedicated static pages while keeping the homepage as a short overview. A CMS is only needed if committee members must publish without editing website files. A custom backend is only needed for features such as accounts, private information, or submissions stored by the site.
+The project pages give each team room for a full description, approach, impact, and team list. Add project images when the club provides them. A CMS is only needed if committee members must publish without editing website files. A custom backend is only needed for features such as accounts, private information, or submissions stored by the site.
 
 ## Project files
 
 ```text
 index.html              Page content, navigation, links, and metadata
+about.html              Club mission, vision, membership, resources, and leadership
+projects.html           Project portfolio directory
+projects/               Individual static project profiles
+events.html             2026 event archive
 styles.css              Colors, typography, layout, responsive rules, and focus styles
 script.js               Mobile menu behavior and automatic footer year
 public/images/hero.jpg  Zetech campus image used in the home hero
@@ -74,7 +75,7 @@ README.md               Project guide and content update notes
 
 ## Interactions
 
-- Header navigation scrolls to page sections.
+- Header navigation links to the site pages and relevant home-page sections.
 - The mobile menu opens and closes with its button. It also closes after a link is selected, when the user clicks outside it, when Escape is pressed, or when the screen expands to desktop width.
 - The join, project sharing, and opportunity links open the WhatsApp invite in a new tab.
 - The footer year updates automatically.
@@ -82,12 +83,13 @@ README.md               Project guide and content update notes
 
 ## Updating content
 
-1. Confirm project facts with project teams, event dates and registration links with event owners, and article text with its author.
+1. Confirm project descriptions, team membership, and current progress with project teams; confirm event dates and registration links with event owners; confirm article text with its author.
 2. Confirm leadership names and roles with the club before changing the profiles. Photos are stored in `public/images/` with role-based filenames.
-3. Edit the corresponding section in `index.html`. Keep unpublished details marked as awaiting confirmation until approved.
-4. Keep links and section IDs in sync. Check that each in-page link points to an existing section.
-5. If the WhatsApp invite changes, replace every occurrence in `index.html`.
-6. Replace the relative `og:image` path with an absolute public image URL when the hosting address is known.
+3. Edit the relevant page. Project descriptions and teams are in separate files under `projects/`; add the corresponding card and detail link in `projects.html` when adding a project.
+4. Add events to `events.html` and update the home-page event preview in `index.html` when needed.
+5. Keep navigation links and page paths in sync. Check that each link points to an existing page or section.
+6. If the WhatsApp invite changes, replace it across the site pages.
+7. Replace the relative `og:image` path with an absolute public image URL when the hosting address is known.
 
 The current project sharing and opportunity buttons open the general WhatsApp group. They do not collect or store submissions separately.
 
