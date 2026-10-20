@@ -272,6 +272,28 @@ a:focus-visible, button:focus-visible {
 .about-impact h2 { margin: 0 0 14px; font: 700 34px / 1.15 var(--display); letter-spacing: -.045em; }
 .about-impact p { margin: 0 0 24px; color: var(--muted); line-height: 1.85; }
 .club-overview-page { margin-top: 0; }
+.event-photo-grid, .community-photo-grid, .bit-image-grid { display: grid; gap: 16px; }
+.event-photo-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 30px; }
+.event-photo-card, .community-photo-grid figure, .bit-image-grid figure { min-width: 0; margin: 0; overflow: hidden; background: #fff; border: 1px solid var(--line); }
+.event-photo-card img, .community-photo-grid img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.event-photo-card figcaption, .community-photo-grid figcaption, .bit-image-grid figcaption { padding: 12px 14px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.archive-years { display: flex; gap: 10px; margin: 22px 0; }
+.archive-years a { padding: 10px 16px; border: 1px solid var(--line); background: #fff; color: var(--blue); font-size: 12px; font-weight: 700; }
+.archive-months { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.archive-month { align-self: start; border: 1px solid var(--line); background: #fff; }
+.archive-month summary { display: flex; padding: 16px 18px; align-items: center; justify-content: space-between; gap: 14px; cursor: pointer; font: 700 17px var(--display); }
+.archive-month summary::marker { color: var(--blue); }
+.archive-count { color: var(--muted); font: 600 11px var(--font); }
+.archive-list { display: grid; gap: 0; padding: 0 18px 12px; margin: 0; list-style: none; }
+.archive-list li { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 4px 10px; padding: 10px 0; border-top: 1px solid var(--line); }
+.archive-list time { color: var(--blue); font-size: 11px; font-weight: 700; }
+.archive-event-name { color: var(--ink); font-size: 12px; line-height: 1.55; }
+.archive-venue { grid-column: 2; color: var(--muted); font-size: 11px; }
+.events-archive { background: var(--paper); }
+.community-photo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.bit-gallery { background: var(--paper); }
+.bit-image-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.bit-image-grid img { display: block; width: 100%; aspect-ratio: 1.45; object-fit: contain; background: #f1f2ef; }
 .editorial-empty {
   display: flex;
   min-height: 220px;
@@ -378,6 +400,7 @@ a:focus-visible, button:focus-visible {
   .club-overview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-detail-layout { grid-template-columns: 1fr; gap: 20px; }
+  .event-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .team-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .intro-copy { padding-top: 0; }
   .values-row { margin-top: 48px; gap: 25px; }
@@ -410,6 +433,7 @@ a:focus-visible, button:focus-visible {
   .item-action { grid-column: 2; text-align: left; }
   .content-cards { grid-template-columns: 1fr; }
   .project-grid, .club-overview { grid-template-columns: 1fr; }
+  .archive-months, .community-photo-grid, .bit-image-grid { grid-template-columns: 1fr; }
   .event-entry { grid-template-columns: 66px minmax(0, 1fr); gap: 16px; padding: 18px; }
   .event-date { min-height: 68px; }
   .event-date strong { font-size: 19px; }
