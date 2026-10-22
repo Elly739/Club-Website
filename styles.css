@@ -240,6 +240,9 @@ a:focus-visible, button:focus-visible {
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .project-card { min-height: 255px; padding: 26px; }
 .project-card[hidden] { display: none; }
+.project-card-title { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; }
+.project-card-title h3 { margin: 15px 0 0; }
+.project-status { display: inline-flex; min-height: 24px; padding: 3px 9px; align-items: center; border: 1px solid #c4d5a1; border-radius: 999px; background: #f1f7e5; color: #3e5d1f; font-size: 10px; font-weight: 700; line-height: 1.2; letter-spacing: .04em; }
 .project-filters { display: grid; grid-template-columns: minmax(180px, 1.4fr) repeat(2, minmax(180px, 1fr)) auto; gap: 12px; align-items: end; margin: 26px 0 8px; padding: 18px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-card); }
 .project-filter-field { display: grid; min-width: 0; gap: 7px; }
 .project-filter-field label { color: var(--blue); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
