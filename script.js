@@ -144,18 +144,3 @@ if (projectProfileBackLink && projectMain) {
     projectMain.append(section);
   }
 }
-
-const communityPhotoGrid = document.querySelector('.community-photo-grid');
-if (communityPhotoGrid && !communityPhotoGrid.querySelector('.community-love-photo')) {
-  const figure = document.createElement('figure');
-  figure.className = 'community-love-photo';
-  const image = document.createElement('img');
-  image.src = 'public/images/I Love Zetech Image.png';
-  image.alt = 'I love Zetech sign outside the university library';
-  image.loading = 'lazy';
-  image.decoding = 'async';
-  const caption = document.createElement('figcaption');
-  caption.textContent = 'A little Zetech pride';
-  figure.append(image, caption);
-  communityPhotoGrid.append(figure);
-}
