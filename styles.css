@@ -486,7 +486,11 @@ a:focus-visible, button:focus-visible {
 }
 
 @media (max-width: 760px) {
-  .smartwaste-cards, .sdg-cards { grid-template-columns: 1fr; }
+  .smartwaste-cards, .sdg-cards, .insight-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 680px) {
+  .project-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
@@ -505,9 +509,21 @@ a:focus-visible, button:focus-visible {
   .event-entry { grid-template-columns: 66px minmax(0, 1fr); gap: 16px; padding: 18px; }
   .event-date { min-height: 68px; }
   .event-date strong { font-size: 19px; }
-  .page-hero { padding: 66px 0 58px; }
+  .page-hero { padding: 48px 0 42px; }
+  .page-hero h1 { font-size: clamp(38px, 10.5vw, 54px); }
+  .page-hero .back-link { margin-bottom: 18px; }
+  .project-detail { padding-block: 50px; }
+  .project-detail-layout { gap: 24px; }
+  .project-detail-block { padding-bottom: 22px; margin-bottom: 22px; }
+  .project-detail-block p { font-size: 14px; line-height: 1.75; }
+  .project-team { padding: 20px; }
+  .project-team ul { gap: 8px; }
   .smartwaste-cards { grid-template-columns: 1fr; }
+  .smartwaste-card, .sdg-card { padding: 22px; }
+  .feature-list li { font-size: 13px; }
+  .smartwaste-stack .wrap { justify-content: flex-start; gap: 10px 16px; }
   .smartwaste-lead .wrap { align-items: flex-start; flex-direction: column; }
+  .smartwaste-lead .button { max-width: 100%; text-align: center; }
   .overview-card { min-height: 0; }
   .project-card { min-height: 0; }
   .team-card-copy { padding: 15px 13px 16px; }
