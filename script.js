@@ -41,3 +41,39 @@ if (menuButton && navigation) {
 
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
+
+const projectFilters = document.querySelector('.project-filters');
+if (projectFilters) {
+  const searchInput = projectFilters.querySelector('#project-search');
+  const categorySelect = projectFilters.querySelector('#project-category');
+  const sdgSelect = projectFilters.querySelector('#project-sdg');
+  const projectCards = [...document.querySelectorAll('.project-grid .project-card')];
+  const projectResults = document.querySelector('.project-results');
+
+  function filterProjects() {
+    const searchTerm = searchInput.value.trim().toLocaleLowerCase();
+    const category = categorySelect.value;
+    const sdg = sdgSelect.value;
+    let visibleCount = 0;
+
+    projectCards.forEach((card) => {
+      const matchesSearch = !searchTerm || card.textContent.toLocaleLowerCase().includes(searchTerm);
+      const matchesCategory = !category || card.dataset.category === category;
+      const cardSdgs = (card.dataset.sdgs || '').split(/\s+/);
+      const matchesSdg = !sdg || cardSdgs.includes(sdg);
+      const isVisible = matchesSearch && matchesCategory && matchesSdg;
+
+      card.hidden = !isVisible;
+      if (isVisible) visibleCount += 1;
+    });
+
+    if (projectResults) {
+      projectResults.textContent = `${visibleCount} ${visibleCount === 1 ? 'project' : 'projects'} found`;
+    }
+  }
+
+  projectFilters.addEventListener('input', filterProjects);
+  projectFilters.addEventListener('change', filterProjects);
+  projectFilters.addEventListener('reset', () => window.requestAnimationFrame(filterProjects));
+  filterProjects();
+}
