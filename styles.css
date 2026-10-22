@@ -200,7 +200,7 @@ a:focus-visible, button:focus-visible {
 .overview-card-feature p { color: #cbd6e2; }
 
 /* Research, innovation and collaboration */
-.focus { background: var(--navy); color: #fff; }
+.focus { background: linear-gradient(90deg, #071e43eb 0%, #071e43d6 58%, #071e43b8 100%), linear-gradient(0deg, #071e4380, transparent 55%), url("public/images/How we explore.png") center 48% / cover no-repeat; color: #fff; }
 .section-heading { display: flex; margin-bottom: 45px; align-items: end; justify-content: space-between; gap: 55px; }
 .section-heading h2 { margin-top: 0; }
 .section-heading .eyebrow + h2 { margin-top: 20px; }
