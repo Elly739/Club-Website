@@ -144,3 +144,29 @@ if (projectProfileBackLink && projectMain) {
     projectMain.append(section);
   }
 }
+
+const readingProgress = document.querySelector('.reading-progress');
+const articleSection = readingProgress?.closest('.article-section');
+if (readingProgress && articleSection) {
+  const progressFill = readingProgress.querySelector('span');
+  let progressUpdatePending = false;
+
+  function updateReadingProgress() {
+    const scrollableDistance = articleSection.offsetHeight - window.innerHeight;
+    const articleScroll = window.scrollY - articleSection.offsetTop;
+    const progress = scrollableDistance > 0 ? Math.max(0, Math.min(1, articleScroll / scrollableDistance)) : 0;
+    progressFill.style.transform = `scaleX(${progress})`;
+    readingProgress.setAttribute('aria-valuenow', String(Math.round(progress * 100)));
+    progressUpdatePending = false;
+  }
+
+  function scheduleProgressUpdate() {
+    if (progressUpdatePending) return;
+    progressUpdatePending = true;
+    window.requestAnimationFrame(updateReadingProgress);
+  }
+
+  document.addEventListener('scroll', scheduleProgressUpdate, { passive: true });
+  window.addEventListener('resize', scheduleProgressUpdate);
+  updateReadingProgress();
+}
