@@ -277,6 +277,15 @@ a:focus-visible, button:focus-visible {
 .page-hero h1 { max-width: 850px; margin: 22px 0 16px; font: 600 clamp(44px, 7vw, 78px) / 1.04 var(--display); letter-spacing: -.065em; }
 .page-hero p { max-width: 720px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
 .page-hero .back-link { display: inline-block; margin-bottom: 28px; color: var(--blue); font-size: 12px; font-weight: 700; }
+.project-facts { display: grid; margin: 30px 0 0; grid-template-columns: minmax(170px, .8fr) minmax(190px, 1fr) minmax(280px, 1.7fr); background: #fff; border: 1px solid var(--line); }
+.project-fact { min-width: 0; padding: 17px 20px; }
+.project-fact + .project-fact { border-left: 1px solid var(--line); }
+.project-fact dt { color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.project-fact dd { margin: 8px 0 0; color: var(--ink); font-size: 12px; line-height: 1.65; }
+.project-sdg-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.project-sdg-tag { display: inline-flex; min-height: 30px; padding: 5px 9px; align-items: center; border: 1px solid var(--line); background: #f7f8f5; color: var(--blue); font-size: 11px; font-weight: 700; }
+.project-sdg-tag:hover { background: #eef1ef; }
+.project-fact-muted { color: var(--muted); }
 .event-list { display: grid; gap: 14px; }
 .event-entry { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 25px; padding: 28px; background: #fff; border: 1px solid var(--line); }
 .event-date { display: flex; min-height: 82px; align-items: center; flex-direction: column; justify-content: center; background: var(--navy); color: #fff; }
@@ -460,6 +469,8 @@ a:focus-visible, button:focus-visible {
   .club-overview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-detail-layout { grid-template-columns: 1fr; gap: 20px; }
+  .project-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-impact-fact { grid-column: 1 / -1; border-top: 1px solid var(--line); border-left: 0 !important; }
   .event-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .smartwaste-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sdg-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -487,6 +498,9 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 760px) {
   .smartwaste-cards, .sdg-cards, .insight-grid { grid-template-columns: 1fr; }
+  .project-facts { grid-template-columns: 1fr; }
+  .project-fact + .project-fact { border-top: 1px solid var(--line); border-left: 0; }
+  .project-impact-fact { grid-column: auto; }
 }
 
 @media (max-width: 680px) {
