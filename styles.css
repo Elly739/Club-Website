@@ -75,7 +75,7 @@ a:focus-visible, button:focus-visible {
 }
 .hero-image, .hero-shade { position: absolute; inset: 0; }
 .hero-image {
-  background: url("public/images/hero.jpg") center 47% / cover no-repeat;
+  background: url("public/images/hero.png") center 47% / cover no-repeat;
   opacity: .46;
   filter: saturate(.72);
 }
@@ -241,6 +241,14 @@ a:focus-visible, button:focus-visible {
 .project-filter-reset { min-height: 44px; padding: 0 14px; border: 1px solid var(--line); background: #f7f8f5; color: var(--blue); font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
 .project-filter-reset:hover { background: #eef1ef; }
 .project-results { min-height: 20px; margin: 0 0 14px; color: var(--muted); font-size: 12px; }
+.related-projects { background: #f6f7f4; }
+.related-projects .section-heading { margin-bottom: 26px; }
+.related-projects .section-heading h2 { margin-top: 12px; font-size: clamp(28px, 4vw, 42px); }
+.related-project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.related-project-card { display: grid; min-width: 0; gap: 12px; padding: 22px; border: 1px solid var(--line); background: #fff; color: var(--ink); transition: border-color .2s ease, transform .2s ease; }
+.related-project-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+.related-project-card strong { font: 600 22px / 1.25 var(--display); }
+.related-project-action { color: var(--blue); font-size: 12px; font-weight: 700; }
 .home-project-grid .project-card:nth-child(n + 4) { display: none; }
 .project-card h3 { margin-top: 15px; }
 .project-impact { display: block; margin-top: 17px; padding-top: 12px; border-top: 1px solid var(--line); color: #4a637a; font-size: 11px; font-weight: 600; line-height: 1.6; }
@@ -338,6 +346,7 @@ a:focus-visible, button:focus-visible {
 .events-archive { background: var(--paper); }
 .events + .events-archive { padding-top: 54px; }
 .community-photo-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.community-love-photo { grid-column: span 2; }
 .bit-gallery { background: var(--paper); }
 .project-detail + .bit-gallery { padding-top: 54px; }
 .bit-image-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -507,6 +516,7 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 760px) {
   .smartwaste-cards, .sdg-cards, .insight-grid { grid-template-columns: 1fr; }
+  .related-project-grid { grid-template-columns: 1fr; }
   .project-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-filter-field:first-child { grid-column: 1 / -1; }
   .project-filter-reset { grid-column: 1 / -1; }
@@ -534,6 +544,7 @@ a:focus-visible, button:focus-visible {
   .content-cards { grid-template-columns: 1fr; }
   .project-grid, .club-overview { grid-template-columns: 1fr; }
   .archive-months, .community-photo-grid, .bit-image-grid { grid-template-columns: 1fr; }
+  .community-love-photo { grid-column: auto; }
   .event-entry { grid-template-columns: 66px minmax(0, 1fr); gap: 16px; padding: 18px; }
   .event-date { min-height: 68px; }
   .event-date strong { font-size: 19px; }
